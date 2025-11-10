@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>IT Quest</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-top: 20px;
+      color: #00e6e6;
+      text-shadow: 0 0 10px #00e6e6;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(6, 70px);
+      gap: 10px;
+      justify-content: center;
+      margin: 30px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      width: max-content;
+    }
+
+    .cell {
+      width: 70px;
+      height: 70px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .start {
+      background-color: #00cc99;
+      box-shadow: 0 0 10px #00cc99;
+    }
+
+    .upgrade {
+      background-color: #3399ff;
+      box-shadow: 0 0 10px #3399ff;
+    }
+
+    .bug {
+      background-color: #ff3333;
+      box-shadow: 0 0 10px #ff3333;
+    }
+
+    .finish {
+      background-color: gold;
+      color: black;
+      box-shadow: 0 0 10px gold;
+    }
+
+    button {
+      background-color: #00e6e6;
+      color: #001f3f;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #00b3b3;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>IT Quest</h1>
+  <p>Resolva desafios em <strong>inglês técnico</strong> e alcance o <strong>Data Center Final!</strong></p>
+
+  <div class="board">
+    <div class="cell start">Start</div>
+    <div class="cell">1</div>
+    <div class="cell">2</div>
+    <div class="cell upgrade">UP</div>
+    <div class="cell">4</div>
+    <div class="cell bug">BUG</div>
+
+    <div class="cell">6</div>
+    <div class="cell upgrade">UP</div>
+    <div class="cell">8</div>
+    <div class="cell bug">BUG</div>
+    <div class="cell">10</div>
+    <div class="cell upgrade">UP</div>
+
+    <div class="cell">12</div>
+    <div class="cell bug">BUG</div>
+    <div class="cell">14</div>
+    <div class="cell upgrade">UP</div>
+    <div class="cell">16</div>
+    <div class="cell">17</div>
+
+    <div class="cell bug">BUG</div>
+    <div class="cell upgrade">UP</div>
+    <div class="cell">20</div>
+    <div class="cell bug">BUG</div>
+    <div class="cell">22</div>
+    <div class="cell finish">🏁</div>
+  </div>
+
+  <button onclick="startGame()">🎲 Start Game</button>
+  <p id="message">Bem-vindo ao IT Quest! Supere os BUGS e chegue ao Data Center Final.</p>
+
+  <script>
+    function startGame() {
+      document.getElementById('message').textContent = 
+        "O jogo começou! Role o dado e avance!";
+    }
+  </script>
+</body>
+</html>
